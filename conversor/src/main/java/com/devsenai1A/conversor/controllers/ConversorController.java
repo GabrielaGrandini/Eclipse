@@ -26,17 +26,25 @@ public class ConversorController {
 						resultado = (num1 - 32) * 5/9;
 					else if (fim.equals("kelvin")) 
 						resultado = (num1 - 32) * 5/9 + 273.15; 
+					else 
+						resultado = num1;
 					break;
 				case "celsius":
 					if(fim.equals("farenheit"))
 						resultado = (num1 * 1.8) + 32;
 					 else if (fim.equals ("kelvin")) 
-						 resultado = num1 + 273.15; break;
+						 resultado = num1 + 273.15;
+					 else 
+						resultado = num1;
+					break;
 				case "kelvin":
 					if(fim.equals("farenheit"))
 						resultado = (num1 - 273.15) * 1.8 + 32;
 					else if (fim.equals ("celsius"))
-						resultado = num1 - 273.15; break;
+						resultado = num1 - 273.15; 
+					else 
+						resultado = num1;	
+					break;
 				default: erro = "Conversão inválida!";
 				}
 				
